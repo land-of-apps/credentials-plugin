@@ -52,7 +52,7 @@ end
 if ci?
   args << %w(-e ci)
   args << '--no-open'
-  args << %W(-a #{env_var('APPLAND_APP_NAME')}") if env_var?('APPLAND_APP_NAME')
+  args << ['-a', env_var('APPLAND_APP_NAME')] if env_var?('APPLAND_APP_NAME')
 end
 
 if ci_branch == 'master'
