@@ -5,6 +5,7 @@ language: java
 branches:
   only:
   - master
+  - appland
 
 before_install: >
   export APPLAND_CLI_DOWNLOAD_URL="$(curl -s https://api.github.com/repos/applandinc/appland-cli/releases/latest \
