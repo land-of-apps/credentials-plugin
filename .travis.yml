@@ -2,10 +2,9 @@ dist: bionic
 
 language: java
 
-
-#branches:
-#  only:
-#  - master
+branches:
+  only:
+  - master
 
 before_install: >
   export APPLAND_CLI_DOWNLOAD_URL="$(curl -s https://api.github.com/repos/applandinc/appland-cli/releases/latest \
@@ -20,7 +19,7 @@ before_install: >
     
          
 script:
-  - mvn -DargLine="-javaagent:appmap-java11.jar" test
+- mvn -DargLine="-javaagent:appmap-java11.jar" test
 
 after_script:
 - env DEBUG=true ./bin/upload-appmaps
