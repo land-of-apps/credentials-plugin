@@ -1,3 +1,5 @@
 name: jenkins-plugin-credentials
 packages:
+- path: jenkins
+- path: hudson
 - path: com.cloudbees.plugins.credentials
